@@ -5,6 +5,7 @@
  */
 package programaidade;
 
+import java.util.Scanner;
 /**
  *
  * @author uisla
@@ -16,6 +17,19 @@ public class ProgramaIdade {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Scanner t = new Scanner(System.in);
+        System.out.println("Em que ano você nasceu: ");
+        
+        int nasc = t.nextInt();
+        int i = 2021 - nasc;
+        System.out.println("Sua idade é: " +i);
+        if (i>=18){
+            System.out.println("Maior de Idade");
+        } else 
+        {
+            System.out.println("Menor de Idade");
+        }
+        
     }
     
 }
