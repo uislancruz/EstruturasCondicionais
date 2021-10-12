@@ -5,6 +5,8 @@
  */
 package programapernas;
 
+import java.util.Scanner;
+
 /**
  *
  * @author uisla
@@ -16,6 +18,32 @@ public class ProgramaPernas {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Scanner tec = new Scanner(System.in);
+        System.out.println("Quntas pernas?");
+        int perna = tec.nextInt();
+        String tipo;
+        System.out.println("Isso é um(a): ");
+        switch (perna){
+            case 1:
+                tipo = "Saci";
+                break;
+            case 2:
+                tipo = "Bipede";
+                break;
+            case 3:
+                tipo = "Tripé";
+                break;
+            case 4:
+                tipo = "Quadrúpede";
+                break;
+            case 6:
+                tipo = "Aranha";
+            default:
+                tipo = "ET";
+                
+                
+        }
+        System.out.println(tipo);
     }
     
 }
