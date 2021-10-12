@@ -145,7 +145,7 @@ public class TelaVoto extends javax.swing.JFrame {
             lblR.setText("Menor de 16: Não vota");
         }else{
             //if ((i > = 16 && i <18) || (i > 70))
-            if ((i >= 16) && (i<18) || (i>70))
+            if ((i >= 16) && (i<18) || (i>=70))
                     {
             lblR.setText("<html>Dos 16 aos 17 e acima de 70 o Voto é Opcional</html>");
         }else{
