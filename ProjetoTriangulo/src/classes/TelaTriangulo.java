@@ -51,6 +51,25 @@ public class TelaTriangulo extends javax.swing.JFrame {
 
         jLabel3.setText("Segmento C");
 
+        sliA.setMaximum(20);
+        sliA.setValue(0);
+        sliA.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                sliAStateChanged(evt);
+            }
+        });
+
+        sliB.setMaximum(20);
+        sliB.setValue(0);
+        sliB.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                sliBStateChanged(evt);
+            }
+        });
+
+        sliC.setMaximum(20);
+        sliC.setValue(0);
+
         lblA.setBackground(new java.awt.Color(153, 153, 153));
         lblA.setText("0");
 
@@ -184,6 +203,17 @@ public class TelaTriangulo extends javax.swing.JFrame {
         // TODO add your handling code here:
         panResposta.setVisible(true);
     }//GEN-LAST:event_btnVerificarActionPerformed
+
+    private void sliAStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sliAStateChanged
+        // TODO add your handling code here:
+        lblA.setText(Integer.toString(sliA.getValue()));
+    }//GEN-LAST:event_sliAStateChanged
+
+    private void sliBStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sliBStateChanged
+        // TODO add your handling code here:
+        
+        lblB.setText(Integer.toString(sliB.getValue()));
+    }//GEN-LAST:event_sliBStateChanged
 
     /**
      * @param args the command line arguments
