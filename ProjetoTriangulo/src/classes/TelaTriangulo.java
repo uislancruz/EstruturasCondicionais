@@ -207,6 +207,25 @@ public class TelaTriangulo extends javax.swing.JFrame {
     private void btnVerificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerificarActionPerformed
         // TODO add your handling code here:
         panResposta.setVisible(true);
+        int a = sliA.getValue();
+        int b = sliB.getValue();
+        int c = sliC.getValue();
+        if (a < b + c && b < a + c && c < a + b) {
+            lblStatus.setText("Formam um Triângulo");
+            if (a == b && b == c) {
+                lblTipo.setText("Equilatero");
+            } else if (a != b && b != c && a != c) {
+                lblTipo.setText("Escaleno");
+            } else {
+                lblTipo.setText("Isosceles");
+            }
+
+        } else {
+            lblStatus.setText("Não Formam um Triângulo");
+            lblTipo.setText("-------------");
+        }
+
+
     }//GEN-LAST:event_btnVerificarActionPerformed
 
     private void sliAStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sliAStateChanged
@@ -216,7 +235,7 @@ public class TelaTriangulo extends javax.swing.JFrame {
 
     private void sliBStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sliBStateChanged
         // TODO add your handling code here:
-        
+
         lblB.setText(Integer.toString(sliB.getValue()));
     }//GEN-LAST:event_sliBStateChanged
 
